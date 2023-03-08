@@ -28,6 +28,13 @@ export default new Vuex.Store({
       },
     ],
     editPost: null,
+    user: null,
+    profileEmail: null,
+    profileFirstName: null,
+    profileLastName: null,
+    profileUsername: null,
+    profileId: null,
+    profileInitials: null,
   },
   mutations: {
     toggleEditPost(state, payload) {
