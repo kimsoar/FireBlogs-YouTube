@@ -23,10 +23,10 @@ export default {
     };
   },
   created() {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(async (user) => {
       this.$store.commit("updateUser", user);
       if (user) {
-        this.$store.dispatch("getCurrentUser");
+        this.$store.dispatch("getCurrentUser", user);
       }
     });
     this.checkRoute();
